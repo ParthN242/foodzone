@@ -12,7 +12,13 @@ const app = express();
 
 dotenv.config();
 app.use(
-  cors({ origin: "https://foodzone-cyan.vercel.app", credentials: true })
+  cors({
+    origin: true,
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS",
+    preflightContinue: true,
+    optionsSuccessStatus: 204,
+    credentials: true,
+  })
 );
 app.use(bodyParser.json());
 app.use(cookieParser());
