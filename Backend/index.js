@@ -11,7 +11,9 @@ const dotenv = require("dotenv");
 const app = express();
 
 dotenv.config();
-app.use(cors({ origin: true, credentials: true }));
+app.use(
+  cors({ origin: "https://foodzone-cyan.vercel.app", credentials: true })
+);
 app.use(bodyParser.json());
 app.use(cookieParser());
 
