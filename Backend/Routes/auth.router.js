@@ -11,6 +11,6 @@ const router = express.Router();
 router
   .post("/create", createUser)
   .post("/login", loginUser)
-  .get("/signout", verifyUser, signOutUser);
+  .get("/signout", signOutUser);
 
 module.exports = router;
