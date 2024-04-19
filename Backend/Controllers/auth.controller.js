@@ -36,7 +36,7 @@ exports.loginUser = async (req, res, next) => {
 
     const option = {
       expires: new Date(Date.now() + 24 * 60 * 60 * 1000),
-      shttpOnly: true,
+      httpOnly: true,
       sameSite: "none",
       secure: "false",
     };
